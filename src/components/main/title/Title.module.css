@@ -1,0 +1,14 @@
+.TitleSection {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* div {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aquamarine;
+} */

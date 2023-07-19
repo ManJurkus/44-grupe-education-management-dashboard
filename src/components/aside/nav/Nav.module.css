@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.meniu {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,9 @@
+.progressTabs {
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    padding: 1rem;
+    background-color: lightpink;
+    border-radius: 1rem;
+    align-items: center;
+}

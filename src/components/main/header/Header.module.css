@@ -1,0 +1,22 @@
+header {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: span 4;
+}
+
+header > div {
+    background-color:blue;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* .notification {
+    background-color:blue;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+} */

@@ -1,0 +1,21 @@
+.PopularCategories {
+        display: flex;
+        flex-direction:column;
+        gap: 15px;
+        padding: 1rem;
+        background-color: lightblue;
+        border-radius: 1rem;
+}
+
+.CategoriesTab {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+.UITab {
+
+}

@@ -1,0 +1,32 @@
+.progressTabs {
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    padding: 1rem;
+    background-color: lightblue;
+    border-radius: 1rem;
+}
+
+.headerTop {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.textTabs {
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+}
+
+.ProgressBar {
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+}
+
+.ProgressBarText {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}

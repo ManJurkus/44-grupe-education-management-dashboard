@@ -1,0 +1,7 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px;
+    background-color: #FAF7F2;
+}
