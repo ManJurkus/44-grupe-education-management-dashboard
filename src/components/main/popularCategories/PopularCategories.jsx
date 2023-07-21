@@ -3,9 +3,9 @@ import style from './PopularCategories.module.css';
 export function PopularCategories() {
     return (
         <div className={style.PopularCategories}>
-            <h1>
+            <h2>
                 Popular Categories
-            </h1>
+            </h2>
             <div className={style.CategoriesTab}>
                 <div>
                     <p>text</p>

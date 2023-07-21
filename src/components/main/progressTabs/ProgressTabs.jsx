@@ -1,22 +1,24 @@
 import style from './ProgressTabs.module.css';
 
-export function ProgressTabs() {
+export function ProgressTabs({infoTabProgress}) {
     return (
         <div className={style.progressTabs}>
             <div className={style.headerTop}>
-                <p>Date</p>
-                <img src="/" alt="Amblem" />
+                <p>Star at:{infoTabProgress[0].createdAt}</p>
+                <div>
+                    {infoTabProgress[0].amblem} 
+                    </div>
             </div>
-            <h1>Text</h1>
+            <h1>{infoTabProgress[0].title}</h1>
             <div className={style.textTabs}>
-                <h2>text</h2>
-                <p>text</p>
+                <h2>{infoTabProgress[0].subtopic}</h2>
+                <p>{infoTabProgress[0].text}</p>
             </div>
             <div className={style.ProgressBar}>
                 <img src="/" alt="Progress-bar" />
                 <div className={style.ProgressBarText}>
                     <p>Progress</p>
-                    <p>20%</p>
+                    <p>{infoTabProgress[0].percentages}%</p>
                 </div>
 
             </div>

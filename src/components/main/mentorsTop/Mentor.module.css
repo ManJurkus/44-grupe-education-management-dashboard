@@ -1,0 +1,28 @@
+.Mentor {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+img {
+    width: 80px;
+}
+
+.mentorInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+p {
+    font-size: 30px;
+}
