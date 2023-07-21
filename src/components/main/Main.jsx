@@ -8,16 +8,16 @@ import { ProgressTabs } from './progressTabs/ProgressTabs';
 import { Title } from './title/Title';
 
 
-export function Main({dataProgress, datamentors}) {
+export function Main({dataProgress, datamentors, users}) {
     return (
         <main>
            <Header />
            <Title />
-           <ProgressTabs infoTabProgress = {dataProgress.filter(item => item.id === 1)} />
-           <ProgressTabs infoTabProgress = {dataProgress.filter(item => item.id === 2)}/>
-           <ProgressTabs infoTabProgress = {dataProgress.filter(item => item.id === 3)}/>
+           <ProgressTabs infoTabProgress = {dataProgress.filter(item => item.id === 1)} userStartDate = {users.map(item => item.dateSartedApp)} />
+           <ProgressTabs infoTabProgress = {dataProgress.filter(item => item.id === 2)} userStartDate = {users.map(item => item.dateSartedWeb)} />
+           <ProgressTabs infoTabProgress = {dataProgress.filter(item => item.id === 3)} userStartDate = {users.map(item => item.dateSartedDashbord)} />
            <ProgressTabsEmpty />
-           <PopularCategories />
+           <PopularCategories dataAllmentors = {datamentors}/>
            <MentorsTop dataAllmentors = {datamentors}/>
 
            

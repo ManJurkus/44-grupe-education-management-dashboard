@@ -1,31 +1,50 @@
 import style from './Mentor.module.css';
 import { BsCheck2Square, BsThreeDotsVertical } from 'react-icons/bs';
+import { useState } from 'react';
 
 
 export function Mentor({dataMentor}) {
-console.log(dataMentor[0].photo);
+
+
+let showMentor = 0;
+let bigestFollow = 0;
+for (let i=0; i<dataMentor.length; i++){
+    if(dataMentor[i].countFoloewers > bigestFollow){
+        bigestFollow = dataMentor[i].countFoloewers;
+        showMentor = i;
+
+    }
+
+}
+
+const [isFollow, setFollow] = useState(false);
+
+function updateFollow() {
+    setFollow(!isFollow);
+}
     
     return (
         <div className={style.Mentor}>
             <div className={style.mentorInfo}>
-            <img src={`mentors/${dataMentor[0].photo}`} alt='Mentor Photo' />
+            <img src={`mentors/${dataMentor[showMentor].photo}`} alt='Mentor Photo' />
 
-            <p>{dataMentor[0].name}</p>
+            <p>{dataMentor[showMentor].name}</p>
             </div>
 
-            <p>{dataMentor[0].subject}</p>
+            <p>{dataMentor[showMentor].subject}</p>
 
-            <p>Course {dataMentor[0].countCourse}</p>
+            <p>Course {dataMentor[showMentor].countCourse}</p>
 
-            <p>{dataMentor[0].countFoloewers} Followers</p>
+            <p>{dataMentor[showMentor].countFoloewers} Followers</p>
 
             <div className={style.options}>
 
-            <button>Follow</button>
+            {isFollow ? <button onClick={updateFollow}>Unfollow</button>  : <button onClick={updateFollow}>Follow</button> }
+            
 
-            <BsCheck2Square />
+            {isFollow ? <BsCheck2Square color='green' size='30px' /> : <BsCheck2Square size='30px'/>}
 
-            <BsThreeDotsVertical />
+            <BsThreeDotsVertical size='30px' />
             </div>
 
 

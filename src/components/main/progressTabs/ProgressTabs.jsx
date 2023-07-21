@@ -1,10 +1,19 @@
 import style from './ProgressTabs.module.css';
 
-export function ProgressTabs({infoTabProgress}) {
+export function ProgressTabs({infoTabProgress, userStartDate}) {
+    console.log(userStartDate);
+
+    let date = new Date(userStartDate[0])
+
+    console.log(date);
+
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let formattedDate = months[date.getMonth()] + ', ' + date.getDate() + ', ' + date.getFullYear();
+
     return (
         <div className={style.progressTabs}>
             <div className={style.headerTop}>
-                <p>Star at:{infoTabProgress[0].createdAt}</p>
+                <p>Star at: {formattedDate}</p>
                 <div>
                     {infoTabProgress[0].amblem} 
                     </div>

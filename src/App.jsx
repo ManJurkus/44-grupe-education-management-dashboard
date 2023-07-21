@@ -10,6 +10,17 @@ import { PiProjectorScreenChartFill } from 'react-icons/pi';
 
 
 function App() {
+const users = [
+  {
+    usersID:1,
+    name: 'Simas Galvocius',
+    dateSartedApp: 1669037742156,
+    dateSartedWeb: 1619037142156,
+    dateSartedDashbord: 1611017142156,
+  }
+  
+];
+
  const data = [
   {
     id: 1,
@@ -51,6 +62,7 @@ function App() {
     subject: 'UI/UX Desinger',
     countCourse : 18,
     countFoloewers : 1200,
+    createat: 1669037742156,
   
   },
   {
@@ -60,6 +72,7 @@ function App() {
     subject: 'Marketer',
     countCourse : 24,
     countFoloewers : 900,
+    createat: 1669017742156,
   
   },
   {
@@ -69,6 +82,7 @@ function App() {
     subject: 'Androied Developer',
     countCourse : 64,
     countFoloewers : 1590,
+    createat: 1661037742156,
   
   },
   {
@@ -78,6 +92,43 @@ function App() {
     subject: 'Fontend Developer',
     countCourse : 85,
     countFoloewers : 3400,
+    
+  
+  },
+  {
+    mentorId:5,
+    name: 'Simas Simas',
+    photo: 'mentor1.jpg',
+    subject: 'UI/UX Desinger',
+    countCourse : 40,
+    countFoloewers : 900,
+  
+  },
+  {
+    mentorId:6,
+    name: 'Simas Apsauginis',
+    photo: 'mentor2.jpg',
+    subject: 'Marketer',
+    countCourse : 12,
+    countFoloewers : 500,
+  
+  },
+  {
+    mentorId:7,
+    name: 'Simas Lepsis',
+    photo: 'mentor3.jpg',
+    subject: 'Androied Developer',
+    countCourse : 24,
+    countFoloewers : 1420,
+  
+  },
+  {
+    mentorId:8,
+    name: 'Simas Kilimas',
+    photo: 'mentor4.jpg',
+    subject: 'Fontend Developer',
+    countCourse : 45,
+    countFoloewers : 2500,
   
   }
 
@@ -86,7 +137,7 @@ function App() {
   return (
     <div className="App">
       <Aside />
-      <Main dataProgress={data} datamentors= {mentors}/>
+      <Main dataProgress={data} datamentors= {mentors} users={users}/>
         
       
 
